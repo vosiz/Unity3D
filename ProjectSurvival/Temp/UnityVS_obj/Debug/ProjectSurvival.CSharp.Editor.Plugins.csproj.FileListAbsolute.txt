@@ -1,0 +1,1 @@
+C:\DATA\Projects\Git\Github\Unity3D\ProjectSurvival\Temp\UnityVS_obj\Debug\ProjectSurvival.CSharp.Editor.Plugins.csprojResolveAssemblyReference.cache
