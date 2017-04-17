@@ -29,6 +29,7 @@ public struct InventoryItem {
     public string action_text;
     public int count;
     public float weight;
+    public ItemDatabaseId item_id;
 };
 
 public struct InventoryBackpackSlot {
@@ -58,10 +59,29 @@ public static class InventoryDatabase{
         item.name = "";
         item.count = 0;
         item.weight = 0;
+        item.item_id = 0;
 
         return item;
     }
 
+
+    /* Returns weight of item*/
+    public static ItemDatabaseId FindItemId(string text) {
+
+        switch(text){
+
+            case "Fiber plants":
+                return ItemDatabaseId.GRASS;
+            case "Medium stone rock":
+                return ItemDatabaseId.MEDIUM_STONE_ROCK;
+            case "Wood stick":
+                return ItemDatabaseId.WOOD_STICK;
+
+            default:
+                throw new System.ArgumentException("Item family not found", "original");
+
+        }
+    }
 
     /* Returns weight of item*/
     public static float FindWeight(string text) {
@@ -138,6 +158,8 @@ public static class InventoryDatabase{
 
         item.count = FindCount(text);
         item.weight = FindWeight(text);
+
+        item.item_id = FindItemId(text);
 
         id++;
     }
