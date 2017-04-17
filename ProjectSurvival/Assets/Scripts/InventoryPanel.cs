@@ -9,6 +9,8 @@ public class InventoryPanel : MonoBehaviour {
     public GameObject backpack_panel;
     public GameObject max_slots_panel;
     public GameObject occ_slots_panel;
+    public GameObject max_capacity_panel;
+    public GameObject capacity_panel;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +18,7 @@ public class InventoryPanel : MonoBehaviour {
         backpack_open_state = false;
         backpack_panel.gameObject.SetActive(backpack_open_state);
 
-        Inventory.initInventory(2, 40);
+        Inventory.initInventory(4, 40, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -30,6 +32,9 @@ public class InventoryPanel : MonoBehaviour {
 
         max_slots_panel.GetComponent<Text>().text = "" + Inventory.maximum_backpack_items;
         occ_slots_panel.GetComponent<Text>().text = "" + Inventory.current_items;
+
+        max_capacity_panel.GetComponent<Text>().text = "" + Inventory.capacity_max;
+        capacity_panel.GetComponent<Text>().text = "" + Inventory.current_capacity;
 
     }
 

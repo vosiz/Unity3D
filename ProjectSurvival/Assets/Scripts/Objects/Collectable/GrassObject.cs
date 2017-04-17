@@ -19,7 +19,7 @@ public class GrassObject : MonoBehaviour {
 
     void Start() {
 
-        InventoryDatabase.InitItem("Grass", out this.item);
+        InventoryDatabase.InitItem("Fiber plants", out this.item);
     }
 
     // Update is called once per frame
@@ -30,23 +30,29 @@ public class GrassObject : MonoBehaviour {
 
         if (distance <= 4) { // is in distance
 
-            if (inv_space == 0) {
+            if (!Inventory.canPickup(this.item)) {
 
                 action_text_displayer.GetComponent<Text>().text = "Cannot " + item.action_text;
-                action_text_displayer.GetComponent<Text>().color = new Color(1, 0, 0);
+                action_text_displayer.GetComponent<Text>().color = Colors.info_text_neg;
             } else {
 
+                action_text_displayer.GetComponent<Text>().color = Colors.info_text;
                 action_text_displayer.GetComponent<Text>().text = item.action_text;
             }
 
             
-            info_text_displayer.GetComponent<Text>().text = item.name;
+            info_text_displayer.GetComponent<Text>().text = item.name + " (" + item.count + ")";
 
             if (Input.GetButtonDown("Action")) { //action button pressed
 
-                if(Inventory.addItem(item)) {
+                int stored = Inventory.addItem(item);
+
+                if ( stored == item.count) { // all was taken, destroy item
                     this.gameObject.SetActive(false);
                     this.NoText();
+                }else { // some or none has beeen stored
+
+                    item.count -= stored;
                 }
 
             }
