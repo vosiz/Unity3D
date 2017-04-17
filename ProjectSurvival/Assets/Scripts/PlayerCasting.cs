@@ -2,23 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCasting : MonoBehaviour {
 
-    public float distance;
-    public Transform other;
 
-    // Update is called once per frame
-    void Update () {
+
+
+public class PlayerCasting : MonoBehaviour
+{
+
+    static public float distance;
+
+    public float debug_distance;
+    public GameObject player;
+
+    private Vector3 player_pos;
+
+
+	// Use this for initialization
+	void Start () {
+
+	}
+
+    // updater
+    void Update() {
 
         RaycastHit hit;
-        Vector3 up = transform.TransformDirection(Vector3.forward);
-        if (Physics.Raycast(transform.position, up, out hit))
-        {
-            distance = hit.distance;
-        }
+        //RaycastHit hitInfo = new RaycastHit();
+        player_pos = player.transform.position;
 
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)){
+            distance = hit.distance;
+            debug_distance = distance;
+        }
+    }
+
+
+    public float GetDistance() {
+        return distance;
     }
 }
+
+
 
 
 //static var DistanceFromTarget : float;
