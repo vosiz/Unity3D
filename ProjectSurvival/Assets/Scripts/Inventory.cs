@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 //public class Inventory : MonoBehaviour {
@@ -122,25 +123,28 @@ public static class Inventory {
     }
 
 
- //   //private int maximum_capacity;   // percent from maximum capacity
+    public static int HasThis(string item_name, int item_count) {
 
- //   //List<object> items;
+        int packages = 0; // has this item × times
+    
+        for(int i = 0; i < maximum_backpack_items; i++) {
 
+            // slot is not occupied
+            if (items[i].free) continue;
 
- //   // Use this for initialization
- //   void Start () {
+            // slot item is not that item
+            if(!items[i].item.name.Equals(item_name)) continue;
 
- //       maximum_items = 2;
- //       current_items = 0;
- //       //this.maximum_capacity = 80; // default
+            if (items[i].item.count >= item_count) {
 
- //       //items = new List<object>();
- //   }
-	
-	//// Update is called once per frame
-	//void Update () {
+                packages = items[i].item.count;
+                
+            }
 
- //       free_slots = maximum_items - current_items;
- //   }
+            break;
+        }
+
+        return packages;
+    }
 
 }

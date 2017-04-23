@@ -9,6 +9,11 @@ public static class Colors {
     public static Color info_text = colorFloat(0xFFC52BFF);
     public static Color info_text_neg = colorFloat(0xFF0000FF);
 
+    public static Color backpack_limited = colorFloat(0xFF000074);
+    public static Color can_craft = colorFloat(0xFFF804FF);
+    public static Color cannot_craft = colorFloat(0x323232FF);
+
+
 
     /* Byte channel value to float*/
     public static Color colorFloat(int r, int g, int b, int a) {
