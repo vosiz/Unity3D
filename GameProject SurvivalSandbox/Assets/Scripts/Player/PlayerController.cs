@@ -7,15 +7,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     [SerializeField]
-    private float speed = 5.0f;
+    private float speed;
     [SerializeField]
-    private float mouse_sensitivity = 3.0f;
+    private float mouse_sensitivity;
+    [SerializeField]
+    private float thrust_jump_speed;
 
     private PlayerMotor motor;
 
 
     // Init
     void Start() {
+
+        this.speed = 5.0f;
+        this.mouse_sensitivity = 3.0f;
+        this.thrust_jump_speed = 1000f;
+
 
         motor = GetComponent<PlayerMotor>();
     }
@@ -37,8 +44,23 @@ public class PlayerController : MonoBehaviour {
         Vector3 mouse_move_x = new Vector3(x_mouse, 0f, 0f) * mouse_sensitivity;
         Vector3 mouse_move_y = new Vector3(0f, y_mouse, 0f) * mouse_sensitivity;
 
+        Vector3 jump = Vector3.zero;
+
+        // apply jumping and thruster jump
+        if (Input.GetButton("Jump")) {
+
+            // TODO: has thruster and is enought energy in thruster
+
+            jump = Vector3.up * thrust_jump_speed;
+        }
+
+        // apply movement and camera rotation
         motor.setVelocity(velocity);
         motor.setRotationX(mouse_move_y);
         motor.setRotationY(mouse_move_x);
+        motor.setJump(jump);
+
+
+
     }
 }

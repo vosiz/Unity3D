@@ -13,15 +13,17 @@ public class PlayerMotor : MonoBehaviour {
     private Vector3 velocity;
     private Vector3 rotation_x;
     private Vector3 rotation_y;
+    private Vector3 jump;
 
     private Rigidbody rb;
 
     // Init
     void Start() {
 
-        velocity = Vector3.zero;
-        rotation_x = Vector3.zero;
-        rotation_y = Vector3.zero;
+        this.velocity   = Vector3.zero;
+        this.rotation_x = Vector3.zero;
+        this.rotation_y = Vector3.zero;
+        this.jump       = Vector3.zero;
 
         rb = GetComponent<Rigidbody>();
     }
@@ -49,8 +51,15 @@ public class PlayerMotor : MonoBehaviour {
     // Performs movement
     private void makeMovement() {
 
+        // moves on floor
         if(this.velocity != Vector3.zero) {
             rb.MovePosition(rb.position + this.velocity * Time.fixedDeltaTime);
+        }
+
+        // jump perform
+        if(jump != Vector3.zero) {
+
+            rb.AddForce(this.jump * Time.fixedDeltaTime, ForceMode.Acceleration);
         }
         
     }
@@ -73,5 +82,11 @@ public class PlayerMotor : MonoBehaviour {
     public void setRotationY(Vector3 rotation) {
 
         this.rotation_y = rotation;
+    }
+
+    // Jump movement
+    public void setJump(Vector3 jump) {
+
+        this.jump = jump;
     }
 }
