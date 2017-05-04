@@ -10,6 +10,8 @@ public class PlayerSetup : NetworkBehaviour {
 
 
     private Camera spect_camera;
+
+
     // Init
     void Start() {
 
