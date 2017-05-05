@@ -21,8 +21,7 @@ public class PlayerController : MonoBehaviour {
 
         this.speed = 5.0f;
         this.mouse_sensitivity = 3.0f;
-        this.thrust_jump_speed = 1000f;
-
+        this.thrust_jump_speed = 1400f;
 
         motor = GetComponent<PlayerMotor>();
     }
@@ -34,14 +33,14 @@ public class PlayerController : MonoBehaviour {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        float x_mouse = Input.GetAxisRaw("Mouse Y");
+        float x_mouse = Input.GetAxisRaw("Mouse Y"); // weird... x / y...
         float y_mouse = Input.GetAxisRaw("Mouse X");
 
         Vector3 x_mov = transform.right * x;
         Vector3 y_mov = transform.forward * y;
         Vector3 velocity = (x_mov + y_mov).normalized * this.speed;
 
-        Vector3 mouse_move_x = new Vector3(x_mouse, 0f, 0f) * mouse_sensitivity;
+        float mouse_move_x = x_mouse * mouse_sensitivity;
         Vector3 mouse_move_y = new Vector3(0f, y_mouse, 0f) * mouse_sensitivity;
 
         Vector3 jump = Vector3.zero;
@@ -59,8 +58,6 @@ public class PlayerController : MonoBehaviour {
         motor.setRotationX(mouse_move_y);
         motor.setRotationY(mouse_move_x);
         motor.setJump(jump);
-
-
 
     }
 }
