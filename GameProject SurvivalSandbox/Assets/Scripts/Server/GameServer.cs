@@ -75,7 +75,7 @@ public static class GameServer {
 
         bool randomize; // random spawn location of object(s)
         Vector3 spawn_loc = location;
-
+        string object_path = "Objects/" + name;
 
         randomize = (location == Vector3.zero);
 
@@ -90,7 +90,7 @@ public static class GameServer {
                     );
             }
 
-            GameObject obj = (GameObject)GameObject.Instantiate(Resources.Load(name), spawn_loc, Quaternion.identity);
+            GameObject obj = (GameObject)GameObject.Instantiate(Resources.Load(object_path), spawn_loc, Quaternion.identity);
         }
 
 
