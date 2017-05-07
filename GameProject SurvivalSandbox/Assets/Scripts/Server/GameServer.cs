@@ -74,21 +74,23 @@ public static class GameServer {
         float radius_max = 10.0f; // in meters 
 
         bool randomize; // random spawn location of object(s)
-        Vector3 spawn_loc = location;
+        Vector3 spawn_loc;
         string object_path = "Objects/" + name;
 
         randomize = (location == Vector3.zero);
 
         for (int i = 0; i < count; i++) {
 
-            if(randomize) {
-
-                spawn_loc = new Vector3(
-                    UnityEngine.Random.Range(-radius_max, radius_max),
-                    UnityEngine.Random.Range(2, radius_max),
-                    UnityEngine.Random.Range(-radius_max, radius_max)
-                    );
-            }
+            // check if coordinates sould be randomized
+            spawn_loc = 
+                new Vector3( 
+                    location.x == 0 ? 
+                        UnityEngine.Random.Range(-radius_max, radius_max) : location.x,
+                    location.y == 0 ?
+                        UnityEngine.Random.Range(2, radius_max) : location.y,
+                    location.z == 0 ?
+                        UnityEngine.Random.Range(-radius_max, radius_max) : location.z
+                );
 
             GameObject obj = (GameObject)GameObject.Instantiate(Resources.Load(object_path), spawn_loc, Quaternion.identity);
         }
