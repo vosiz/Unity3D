@@ -1,0 +1,12 @@
+000 - Basics
+Tutorial - game basics
+Learn basic of the game and interaction with world and HUD.
+--END--
+001 - First steps
+Tutorial - build, craft, survive
+Learn how to build, craft and survive...
+--END--
+002 - Advanced
+Tutorial - colony
+Command survivalist in group. Teach how to make progress. Build a decend colony.
+--END--

@@ -103,7 +103,7 @@ public static class Inventory {
         return can_be_added;
     }
 
-    static public bool canPickup(InventoryItem item) {
+    private static bool canPickup(InventoryItem item) {
 
         // Check free slots
         if (free_backpack_slots == 0) {
@@ -123,7 +123,7 @@ public static class Inventory {
     }
 
 
-    public static int HasThis(string item_name, int item_count) {
+    private static int HasThis(string item_name, int item_count) {
 
         int packages = 0; // has this item × times
     

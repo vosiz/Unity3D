@@ -1,0 +1,75 @@
+
+version 0.0.470	(30.06.2017)
+===============================
+// Bug fixes
+- mouse cursor (enabled when in inventory, disabled elsewhere)
+
+// Game mechanics
+- implemented simple inventory (access by "TAB")
+- items/object can be collected by interaction button (default "E")
+- collected items are stored in inventory
+- same item type (indentical) are stacked in 1 (same) slot
+- item count (of stored items in inventory) is incrementing by real number of stored and collected items
+- basic capacity mechanics (when reaches limit - cannot collect more)
+- inventory slot mechanics (when reaches max - cannot collect more)
+
+// Game scenario
+- spawned 50 Grass "boxes" for testing inventory
+
+// Game GUI
+- Inventory design and layout - minor tunes
+
+// Known issues
+- when entering backpack while moving player or aiming -> continous moving or aiming (following same vector, not disabled)
+
+
+version 0.0.348	(25.06.2017)
+===============================
+
+// Game GUI
+- major fix - object detection (on cursor over) is working properly
+
+// Configs and tune-ups
+- Player distance interaction changed (interaction, tooltip show, action text show)
+
+version 0.0.292	(24.06.2017)
+===============================
+
+// Game mechanics
+- reimplemented server commands - create map object
+- can created objects randomly in map (in radius from player)
+
+// System
+- reimplemented DEV scenario settings (in devel version spawning items randomly on platform)
+
+// Game GUI
+- tooltip showing bugs fix (object names, server-spawned items has tooltips too)
+- tooltip display is now on button hold. ("q" by default)
+- action text added on mouse over object
+
+
+version 0.0.245 (23.06.2017)
+===============================
+// System
+- added version autoincrement system (now can track changes)
+
+// GUI - menus
+- added basic Main Menu (most items disabled)
+- user can enter development version by "tutorial - first steps" (working GUI) 
+- user can quit game by quit button in main menu
+
+// Game object
+- added simple floor, simple sun generating light
+- added primitive player prefab with working physics (can move, jump, fly by "jetpack")
+- added cube with texture - representing Grass object
+
+// Game mechanics
+- players are spawned on spawning points
+- simple multiplayer implemented - on LAN (one will host, other will join)
+- simple information transfering between host and client (dummy moves, no rotation of player)
+- tooltip infromation on collectable game objects (when 3 meters far and aiming directly)
+
+// Game GUI
+- Player can enter Crafting menu and inventory (Backpack) by TAB key (by default)
+- added Crosshair
+- when aiming on Grass object - tooltip will show up (item database fetching)

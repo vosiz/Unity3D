@@ -93,6 +93,8 @@ public static class GameServer {
                 );
 
             GameObject obj = (GameObject)GameObject.Instantiate(Resources.Load(object_path), spawn_loc, Quaternion.identity);
+
+            obj.name = name;
         }
 
 

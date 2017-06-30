@@ -6,6 +6,7 @@ public enum GAME_SCENARIO{
 
     /* Spawns grass, stones and sticks on map*/
     GAME_SCENARIO_001,
+    GAME_SCENARIO_002
 };
 
 public class GameScenario : MonoBehaviour {
@@ -24,9 +25,9 @@ public class GameScenario : MonoBehaviour {
             case GAME_SCENARIO.GAME_SCENARIO_001:
 
                 // Create collectable objects
-                GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Stick 0 0 0 5");
-                GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "MediumStoneRock 0 0 0 4");
-                GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Grass 0 0 0 10");
+                //GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Stick 0 0 0 5");
+                //GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "MediumStoneRock 0 0 0 4");
+                GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Grass 0 0 0 50");
 
                 break;
 

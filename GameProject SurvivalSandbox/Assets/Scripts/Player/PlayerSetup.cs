@@ -36,17 +36,25 @@ public class PlayerSetup : NetworkBehaviour {
 
             
         }
+
+
+        Inventory.initInventory(PlayerConfig.init_slots_count, PlayerConfig.max_inventory_slots, PlayerConfig.init_weight_cap);
     }
 
     // On clock tick
     void Update() {
 
-        // Change view from FSP style to RPG and vice versa
-        if(Input.GetButtonDown("ChangeView")) {
+        //// Change view from FSP style to RPG and vice versa
+        //if(Input.GetButtonDown("ChangeView")) {
 
-            this.fps_view = !this.fps_view;
-            Debug.Log("view is fps: "+ this.fps_view.ToString());
-        }
+        //    this.fps_view = !this.fps_view;
+        //    Debug.Log("view is fps: "+ this.fps_view.ToString());
+        //}
+    }
+
+    void FixedUpdate() {
+
+        
     }
 
     // On Disable

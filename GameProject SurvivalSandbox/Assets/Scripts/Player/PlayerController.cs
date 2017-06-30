@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour {
     // On tic update
     void Update() {
 
+        if (PlayerGuiController.show_backpack) return;
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
