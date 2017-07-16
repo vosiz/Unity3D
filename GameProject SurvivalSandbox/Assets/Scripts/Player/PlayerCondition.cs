@@ -17,8 +17,10 @@ public class PlayerCondition : MonoBehaviour {
     private float energy_percent;
     private float energy_decrement;
 
-    private GameObject condition_panel;
 
+    private GameObject pgui;
+
+    private Transform condition_panel;
     private Transform cond_panel_hp;
     private Transform cond_panel_hp_max;
     private Transform cond_panel_hp_bar_act;
@@ -45,7 +47,11 @@ public class PlayerCondition : MonoBehaviour {
         this.energy_regen_rate = 1.0f;
         this.energy_percent = 100;
 
-        this.condition_panel = GameObject.FindGameObjectWithTag("PlayerConditions");
+        pgui = GameObject.FindWithTag("PlayerGui");
+
+        this.condition_panel = Utilities.GetChildrenByName(pgui, "Conditions");
+        //this.condition_panel = GameObject.FindGameObjectWithTag("PlayerConditions");
+        this.condition_panel.gameObject.SetActive(true);
 
         this.cond_panel_hp = 
             Utilities.GetChildrenByName(condition_panel, "HpTextActual");

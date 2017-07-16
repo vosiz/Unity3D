@@ -1,3 +1,8 @@
+version 0.0.637	(16.07.2017)
+===============================
+// Bug fixes
+- crosshair and condition bars show after joining the game
+
 version 0.0.630	(16.07.2017)
 ===============================
 // Bug fixes
