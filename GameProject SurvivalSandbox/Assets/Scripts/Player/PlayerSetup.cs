@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
+
 public class PlayerSetup : NetworkBehaviour {
 
     [SerializeField]
@@ -10,13 +12,15 @@ public class PlayerSetup : NetworkBehaviour {
 
     private Camera spect_camera;
 
-    [SerializeField]
-    private bool fps_view;
+
+
+    //[SerializeField]
+    //private bool fps_view;
 
     // Init
     void Start() {
 
-        this.fps_view = true;
+        //this.fps_view = true;
 
         if (!isLocalPlayer) {
 
@@ -37,8 +41,10 @@ public class PlayerSetup : NetworkBehaviour {
             
         }
 
-
+        // init inventory script
         Inventory.initInventory(PlayerConfig.init_slots_count, PlayerConfig.max_inventory_slots, PlayerConfig.init_weight_cap);
+
+        
     }
 
     // On clock tick
@@ -52,11 +58,6 @@ public class PlayerSetup : NetworkBehaviour {
         //}
     }
 
-    void FixedUpdate() {
-
-        
-    }
-
     // On Disable
     void OnDisable() {
 
@@ -65,8 +66,8 @@ public class PlayerSetup : NetworkBehaviour {
         }
     }
 
-    public bool getView() {
+    //public bool getView() {
 
-        return this.fps_view;
-    }
+    //    return this.fps_view;
+    //}
 }

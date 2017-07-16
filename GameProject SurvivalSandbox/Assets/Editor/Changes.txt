@@ -1,3 +1,30 @@
+version 0.0.630	(16.07.2017)
+===============================
+// Bug fixes
+- reimplemented buggy energy bar behavior
+
+
+version 0.0.529	(11.07.2017)
+===============================
+// GUI
+- added simple GUI condition bar
+- implemented HP and ENERGY bar
+- implemented behavior of energy bar (buggy)
+
+// Knowm issues
+- wrong behavior of energy bar (rescaling actual energy - wrong behavior)
+
+
+version 0.0.508	(09.07.2017)
+===============================
+// Game mechanics
+- added object mutations (same object represented with differend prefabs)
+- object are spawned with random rotation (server command)
+
+// Graphics
+- new textures adde to grass object (collectable item)
+- using Free texture pack for foilage
+
 
 version 0.0.470	(30.06.2017)
 ===============================

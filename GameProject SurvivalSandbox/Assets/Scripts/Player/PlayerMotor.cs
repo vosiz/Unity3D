@@ -5,6 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerSetup))]
+[RequireComponent(typeof(PlayerCondition))]
 
 public class PlayerMotor : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class PlayerMotor : MonoBehaviour {
     private Vector3 camera_def_pos;
 
     private PlayerSetup p_setup;
+    private PlayerCondition p_cond;
 
     private Vector3 velocity;
     private Vector3 rotation_x;
@@ -40,6 +42,7 @@ public class PlayerMotor : MonoBehaviour {
         this.current_rotation_y = 0f;
 
         this.p_setup = GetComponent<PlayerSetup>();
+        this.p_cond = GetComponent<PlayerCondition>();
 
         this.camera_def_pos = camera.transform.position;
     }
@@ -86,6 +89,8 @@ public class PlayerMotor : MonoBehaviour {
         // moves on floor
         if(this.velocity != Vector3.zero) {
             rb.MovePosition(rb.position + this.velocity * Time.fixedDeltaTime);
+            // TODO: should implement factors affecting decrementation
+            p_cond.EnergyDec(0.1f);
         }
 
         // jump perform

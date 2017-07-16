@@ -57,8 +57,13 @@ public static class GameServer {
 
                 CreateMapObject(
                     split[0], 
-                    new Vector3(Int32.Parse(split[1]), Int32.Parse(split[2]), Int32.Parse(split[3])), 
-                    split.Length == 5 ? Int32.Parse(split[4]) : 1);
+                    new Vector3(
+                        Int32.Parse(split[1]), 
+                        Int32.Parse(split[2]), 
+                        Int32.Parse(split[3]) ), 
+                        split.Length >= 5 ? Int32.Parse(split[4]) : 1,
+                        split.Length >= 6 ? Int32.Parse(split[5]) : 0
+                );
 
                 break;
 
@@ -68,14 +73,19 @@ public static class GameServer {
         }
     }
 
-
-    static private void CreateMapObject(string name, Vector3 location, int count = 1) {
+    // Creates object on map
+    // - of given name
+    // - at ceratin location (0,0,0 mean random to X meters)
+    // - count of objects
+    // - with different mutations of name (object001 etc...)
+    static private void CreateMapObject(string name, Vector3 location, int count = 1, int name_mutations = 0) {
 
         float radius_max = 10.0f; // in meters 
 
         bool randomize; // random spawn location of object(s)
         Vector3 spawn_loc;
-        string object_path = "Objects/" + name;
+        string object_path;
+
 
         randomize = (location == Vector3.zero);
 
@@ -92,8 +102,36 @@ public static class GameServer {
                         UnityEngine.Random.Range(-radius_max, radius_max) : location.z
                 );
 
-            GameObject obj = (GameObject)GameObject.Instantiate(Resources.Load(object_path), spawn_loc, Quaternion.identity);
+            // random rotation of object
+            Quaternion rotation = Quaternion.Euler(
+                UnityEngine.Random.Range(-180, 180),
+                UnityEngine.Random.Range(-180, 180),
+                UnityEngine.Random.Range(-180, 180));
 
+            // rotate spawn object
+            spawn_loc = rotation * spawn_loc;
+
+            // check name mutations
+            if(name_mutations > 0) {
+
+                // sets path to object (by name + mutation number)
+                object_path = "Objects/" + name + UnityEngine.Random.Range(1, name_mutations+1).ToString("D3");
+            } else {
+
+                // sets path to object (by name)
+                object_path = "Objects/" + name;
+            }
+
+
+            // instantiate object in map
+            GameObject obj = (GameObject)GameObject.Instantiate(Resources.Load(object_path), spawn_loc, 
+                Quaternion.Euler(
+                    UnityEngine.Random.Range(0.0f, 360.0f),
+                    UnityEngine.Random.Range(0.0f, 360.0f),
+                    UnityEngine.Random.Range(0.0f, 360.0f)
+                 ));
+
+            // name correction
             obj.name = name;
         }
 

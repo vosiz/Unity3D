@@ -99,7 +99,12 @@ public static class ItemDatabase {
     /* Returns count of item*/
     private static int FindItemCount(string name) {
 
-        switch(name) {
+        // check if there is mutation of this name (NAME###)
+        if (TextUtilities.IsEndingDigit(name, 3)) {
+            name = TextUtilities.TrimEnding(name, 3);
+        }
+
+        switch (name) {
 
             /* Atomic items*/
 
@@ -116,6 +121,11 @@ public static class ItemDatabase {
 
     /* Returns weight of item*/
     private static float FindItemWeight(string name) {
+
+        // check if there is mutation of this name (NAME###)
+        if (TextUtilities.IsEndingDigit(name, 3)) {
+            name = TextUtilities.TrimEnding(name, 3);
+        }
 
         switch (name) {
 
@@ -146,6 +156,11 @@ public static class ItemDatabase {
 
     /* Tries to look up item in database*/
     private static bool FindItem(string item_name, out GameItem item) {
+
+        // check if there is mutation of this name (NAME###)
+        if(TextUtilities.IsEndingDigit(item_name, 3)) {
+            item_name = TextUtilities.TrimEnding(item_name, 3);
+        }
 
         // creates empty
         CreateEmptyItem(out item);

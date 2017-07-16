@@ -79,4 +79,25 @@ static public class TextUtilities {
 
         return str.Replace("(Clone)", "");
     }
+
+    // Tries if ending is a digit
+    static public bool IsEndingDigit(string str, int from_end_index) {
+
+        if (from_end_index < 0) Errors.Error("Index is lower than 0");
+        if (str == null) Errors.Error("Given string is null");
+
+        string ending = str.Substring(str.Length - from_end_index, from_end_index);
+        int x = 0;
+
+        return System.Int32.TryParse(ending, out x);
+    }
+
+    // Trims last X characters
+    static public string TrimEnding(string str, int x) {
+
+        if (x < 0) Errors.Error("Index is lower than 0");
+        if (str == null) Errors.Error("Given string is null");
+
+        return str.Substring(0, str.Length - 3);
+    }
 }

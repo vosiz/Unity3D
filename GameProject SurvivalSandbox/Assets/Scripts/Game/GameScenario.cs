@@ -27,7 +27,7 @@ public class GameScenario : MonoBehaviour {
                 // Create collectable objects
                 //GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Stick 0 0 0 5");
                 //GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "MediumStoneRock 0 0 0 4");
-                GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Grass 0 0 0 50");
+                GameServer.Command(GAME_SERVER_COMMAND.CREATE_MAP_OBJECT, "Grass 0 0 0 50 2");
 
                 break;
 

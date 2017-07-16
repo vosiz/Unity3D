@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour {
     //[SerializeField]
     //ScriptableObject scenario;
 
-
     // Use this for initialization
     void Start () {
 
@@ -19,6 +18,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+
 	}
+
 }
