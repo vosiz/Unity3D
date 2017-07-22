@@ -1,0 +1,147 @@
+1) Look and move - text
+====================================================
+// Introduction to tutorials
+Vítejte v prvním tutoriálu. Budu Vám zadávat úkoly a vysvětlovat jak věci fungují.
+Pokaždé se zobrazí takovéto okno dialogu (zkr. Dialog) a hra se pozastaví. Stisknutím Enteru či kliknutím na tlačítko "Ok" se dialog zavře a můžete pokračovat ve hře.
+
+Tutoriály a dialogy jsou primárně (hl. počáteční) zaměřeny na nové hráče. Avšak i zkušený hráč nemající zkušenost s touto hrou si přijde na své.
+
+Kdykoli je možné předešlý dialog vyvolat klávesou "L", kde bude mj. zobrazen i Váš seznam úkolů. Dialogy lze přeskakovat odkliknutím či Enterem pokud je zobrazen.
+
+
+// HeadsUpDisplay introduction
+Přejděme k HUD.
+HUD neboli "Heads up display" je označení pro vrstvu obrazovky, která Vám (hráči) umožní sledovat důležité informace o postavě či průběhu hry. Využívá se tzv. grafické uživatelského rozhraní (GUI - graphical user interface). Zde je HUD rozhraní rozděleno do 6 sekcí.
+
+
+// Toolbelt (lower-middle)
+V dolní části uprostřed je situován opasek (neboli Toolbelt). Ten obsahuje předměty, které má hráč po ruce. Vždy je jeden aktivní a to je ten, který hráč třímá v ruce. Hráč má možnost přepínat mezi předměty a to buď kolečkem myši či číselnými klavesami od 1 až 0.
+Předměty lze vyjmout a přidat v inventáři, o kterém bude řeč v jiném tutoriálu.
+V současné době (na začátku hry) je v základní konfiguraci nastaven počet dostupných slotů 6. Tedy hráč může využít až 6 různých předmětů pro rychlé použití. V pozdějších částech hry je možné využít až 20 rychlých slotů v opasku. Navýšení počtu je možné využitím jistých předmětů, které hráč získá nebo vyrobí.
+
+Když už je řeč o konfiguraci; během tutoriálů občas narazíme na konfigurace a její základní nastavení. Hru a její scénář je možné upravovat pomocí nastavení. Tzn., že některé funkce lze zapínat, vypínat nebo upravovat jejich hodnoty. V základu je konfigurace nastavena tak, aby hra byla co "nejrealističtější" a zároveň ale i nejtěžší. 
+Úprava konfigurace je možná jen pro styl hry typu SANDBOX ať již v režimu jednoho nebo více hráčů. Veškeré tutoriály mají konfiguraci vždy upravenou v základu, aby bylo možné demonstrovat a vysvětlit všechny aspekty dané věci. Stejně tak tomu je i nyní u opasku, který má počateční stav dostupných slotů roven 6.
+
+
+// Conditions (lower-left corner)
+V dolní práve část se nachází panel se stavy hráče.
+Červená lišta znázorňuje hráčovo zdraví tzv. zásahové body (Hit points, zk. HP). Současný stav hráčova HP je ilustrován zkracováním lišty a snižováním číselné hodnoty. Pokud je hráčovo zdraví na 0 tak zemřel. Body v čislené podobě lze doplnit až na maximální hodnotu. To lze uskutečnit několika způsoby. V první řadě je zdraví doplňováno samo pomocí regenerace (také zk. Regen). Hráč může de facto jen sedět a čekat dokud se mu zdraví plně neobnoví. Tento způsob je však velmi neefektivní z hlediska času. Celý proces lze urychlit například požitím některých předmětů. Mezi ně patří např. jídlo či medikamenty, které hráč během hry získává.
+
+Žlutá lišta znázorňuje hráčovu energii (neboli Energy points, zk. EP). Energie je potřeba pro vykonávání činností, ale např. i k běhu. Čím je úkon náročnější, tím více využito energie. Energie se sama doplňuje stejně jako HP. Lze doplnit předměty či prostým čekáním. Čím více je postava vyčerpána tím více trvá spuštění procesu regenerace. Pokud je číselná hodnota rovna nule, hráč nemůže provádět žádné (energeticky náročné) úkony. Např. chůze je povolena, ale snižuje to efekt regenerace.
+
+Idikace žízně je znázorněna světle modrou lištou. Hráč musí doplňovat tekutiny, které zabraní, aby zemřel. Jeli totiž indikace žízně u hodnoty 0, hráč do pár minut zemře. Tekutiny lze doplňovat přímo ze zdrojů pitné vody či předměty.
+
+Stejně jako hráč může trpět žízní může trpět i hladem. Indikátor je hned vedle. Hráč musí doplňovat kalorie, aby nezemřel. Stejně jako u žízně do pár minut umírá, pokud je stav sytosti 0.
+
+Hlad a žízeň je možné vypnout v konfiguraci. Hráč tak není nucen vyhledávat a uchovávat předměty, které stav sytosti udržují.
+
+Nad lištami je oblast, ve které jsou indikovány stavy hráče. Prakticky to funguje tak, že se zde zobrazují ikonky 4 charakteristických barev.
+
+Benefitní stavy se zobrazují ikonkami zelené barvy. Tyto stavy podporují nějakým způsobem hráče. Např. pokud je hráč dobře najeden, je zvýšena regenerace HP a EP. Nebo pokud je hráč schován v temném zákoutí a není vidět.
+Informativní stavy jsou značeny světle modrými ikonkami. Nikterak neovliňují hráče a jsou infromativního rázu. Např. oznámení, že hráč se skrčil, či že sedí na židli.
+Varování jsou stavy, které hráč upozorňují na možné hrozby a okolnosti, které mohou negativně ovlivnit hráčův stav. Mezi takové např. patří inidkace, že hráč byl zaznamenán smysly nepřítele a je vyhledáván, či že okolní teplota způsobuje nadměrné využití tekutin či kalorií.
+Červené stavy nepřináší nic dobrého a hráč je napřímo negativně ovlivněn. Mezi negativní stavy například patří podchlazení, krvácení či jakákoliv akutní nemoc.
+
+Stavy si lze jistým způsobem navozovat (např. jisté předměty), stejně tak lze nekteré negativní stavy rušit. Je však důležité tyto stavy sledovat. V konfiguraci lze stavy vypnout.
+
+Level (upper-left)
+V horní pravé části je vyčíslena úroveň (Level) hráčovi postavy stejně tak s lištou, která zaznamenává postup.
+
+Level je základem RPG (hry na hrdiny/role) her. Hráčovým cílem je se neustále zlepšovat a to je mu umožněno pomocí získaných nových úrovní. S každou další úrovní má hráč na výběr na permanentní vylepšení či schopnosti ze stromu schopností (Skill tree). O tom a detailněji v jiném tutoriálu.
+
+Úrovně se získávají pomoci bodů, které se nazývající zkušenostními body (tzv. EXPs). Pokud hráč nashromáždil dostatečné množství, automaticky postupuje do vyšší úrovně.
+Expy se získávají všemožnými způsoby. Nejběžnějším způsobem je prostě a jednoduše hrát hru. Každá činnost dává hráči EXPy. Některé však více než jiné. Je na hráči, aby objevil, které činnosti mu zaručují stabilní růst.
+
+
+// Compass (upper-middle)
+Uprostřed horní části HUD je lišta kompasu. Ta slouží hráči k orientaci. V případě, že jsou poblíž nepřátelé (či naopak spřátelené jednotky), kompas je umí indikovat. Indikace však záleží na síle signálu, který je ovlivněn některými faktory. Příkladem může být například plížící se nepřítel malého vzrůstu apod.
+
+
+// Minimap (upper-right corner)
+V pravém horním rohu se nachází sekce minimapy. Ta je tvořena zejména onou zmíněnou minimapou (Minimap). Ilustruje danou oblast s orientací na sever. Je to skutečná část mapy (o ktéré bude řeč jindy). Střelka uprostřed ukazuje, kde se hráč nachází a jakým směrem hledí.
+
+U minimapy se nachází údaje, které hráč může sledovat.
+Prvním z nich je herní čas (neboli in-game-time). Tedy čas ve hře. Den a noc se střídají ve 24 hodinových IGT cyklech. Slunce zapadá na západě a vychází na východě; stejně tak i měsíce (ano!). V konfiguraci lze nastavit denní cyklus planety. V základní konfiguraci den trvá hodinu reálného času. Tedy každá hodina trvá 2,5 minuty reálného času. Slunce vychází ve 4:00 a zapádá ve 22:00. I to lze však nastavit.
+Denní cyklus je ilustrován posuvnou lištou.
+
+U IGT je je údaj reálného času (RT). Tato hodnota odpovídá lokálnímu času zakladatele serveru v případě hry pro více hráču. U jedno-hráčové hry čas odpovídá času operačního systému.
+
+Dalším údajem je teplota. Prvním údajem nalevo je teplota hráče, tak jak ji vnímá nebo cití. Druhým je teplota v okolí hráče.
+Hráčova teplota vždy odpovídá teplotě okolí. Avšak má možnost hodnotu modifikovat např. oblečením nebo jistými předměty. V zimních biomech teplé oblečení izoluje a zabraňuje promrznutí. Naopak ve velmi teplých biomech klouboky či trička zabraňují přehřátí.
+Teplota hráči může uškodit a dokonce způsobit i smrt. Příliš teplé počasí donucuje hráče více spotřebovávat tekutiny, oproti tomu příliš studené zase způsobí nadbytečné použití živin. Avšak hypotermie či úžeh jsou v pokročilém stavu smrtelné. 
+
+Nastaviltené budík může hráč použit k upozornění na důležitou nadcházející se událost.
+Budík lze nastavit do dvou režimů.
+Prvním je klasický budík, který zazvoní jeli dosažen nastavený čas.
+Druhým je odpočet a ten zazvoní při uběhnutí nastaveného času.
+Budík lze nastavit v RT nebo IGT jednotkách.
+Pro nastavení budíků je nutný přístup z inventáře, ale o tom v jiném tutoriálu.
+
+// Equipment (lower-right corner)
+Sekce pravého dolního rohu je vyhraněna pro dynamický typ informací, které jsou přímo ovlivněny hráčem a jeho výzbrojí.
+Např. pokud hráč třímá v rukou zbraň, je zde vyobrazen stav zásobníku a celkový počet munice. Dále pak i stav zbraně, její název apod.
+Také zde může být vyobrazen stav hráčova brnění.
+V případě, že hráčí řídí nějaké vozidle, je zde indikován stav onoho vozidla, přip. jeho munice, paliva,...
+
+
+// Look around
+HUD za námi, můžeme se nyní rozhlednout po okolí. Použijte myš pro rozlédnutí se.
+
+Je možné zvolit jiný pohled pomocí klávesy "V". Zkuste si až 4 různé pohledy. Jakmile budete spokojeni se svoleným režimem pohledu, namiřte kurzor myši (zaměřovací kříž) na nedalekou vlajku na jihu.
+
+// First moving
+Ve hře se postava pohybuje pomocí kláves WSAD, které stejně jako klávesy šipek pohybují hráčem dopředu, dozadu a do stran.
+
+Použijte klávesu "W" pro pohyb dopředu až ke vlajce.
+
+Nyní použijte klavesu "S", aby jste se od vlajky vzdálili na výchozí pozici.
+
+A teď si vyzkoušejte pohyb do stran (tzv. štráfování - Strafe). Nejdříve doleva.
+
+A nyní doprava.
+
+Skvěle zvládnuto. Avšak pohyb pomocí klávesnice musí být sychronizován s myší. Samotný pohyb dodává postavě jen pohyb. Myš oproti tomu určuje směr.
+Pomocí kombinace pohybu klávesnice a myši se dostaňte až k vlajce, které se objevila na severo-východě.
+
+Výborně. Nyní se dostaňte k vlajce, která se objevila dále na sever. Vzdálenost je vyšší než předhozí, avšak jako pomůcka v orientaci byla vyznačena na minimapě.
+
+Další vlajka se oběvila ještě dále, není viditelná na minimapě, protože ta má jen omezený rádius. Využijte k orientaci kompas. Ke zdolání tak velké vzdálenosti použijte běh.
+Běh je spuštěn pomocí klávesy "Shift". Pomocí běhu se vzdálenosti překonají rychleji, avšak je spotřebováno více energie.
+
+Skvěle. Všiměte si, jak se vaše energie postupně doplňuje. Počkejte, než se Vám energie doplní.
+
+Vydejte se k další vlajce, která objevila u hrání klád.
+
+Perfektní místo na vyzkošení dalšího možného pohybu. Přesuňte se k další vlajce u spadlé klády.
+
+Toto místo je neprůchozí klasický pohybem ve stoje. Je zapotřebí se skrčit a posléze projít. Skrčení či plížení (tzv. Sneak) je vyvolán stisknutím klávesy "Ctrl". Zkuste si to.
+
+Všimněte si, že se pohled i postava snížily. A že jste skrčení Vás informuje ikonka v oznamovací oblasti stavů.
+
+Nyní ve skrčeném stavu prolezte vniklou škvírou až k další vlajce.
+
+Krčení není dobré jen k překonávání překážek tohoto typu.
+Přikčení totiž výborně funguje např. i při střelbě, kdy velmi účinně tlumí zpětné rázy a velmim dobře stabilizuje rozpětí střelby.
+
+Další vlastností získanou při skrčení je snížení objevitelnosti hráče.
+Toto je naprosto stěžejní pokud se hráč skrývá. Ať již nechce být objeven nepřítelem či se k nepříteli blíží a nechce být detekován smysly.
+
+Plížení si vyzkoušíme u další vlajky, která je kousek od cesty, na které stojíte.
+
+Představme si scénář, kdy je modrá vlajka u hrání nepřítel, který klídá danou oblast a vy nemáte jinou možnost, něž projít touto oblastí. 
+Nejlepším řešením je se okolo nepřítele proplížit.
+Skrčený se přibližte k červené vlajce u hrání.
+
+Nyní se snažte dostat k zelené vlajce na konci hrání. Jakmile jste objeven, celá část se bude opakovat.
+
+Hráč může detekován různým způsobem. Vše se odvíjí od typu nepřítele, který se Vás snaží zabít.
+Například můžete být spatřen. Na různé vzdálenosti, při různém druhu krytí. Vizuální detekcí to však nekončí. Nepřítel se nemusí integrovat pouze na zrak.
+Další možností detekce je sluch. Tedy vytvářením hluku např. pohybem byť ve skrčené poloze příliš blízko vyvolá detekci.
+Nkteří nepřátelé se řídí pachy. Může Vás prozradit Víš tělesný pach, ale i emitace některých předmětů, které máte v opasku či invetáři/batohu.
+V neposlední řadě můžou někteří nepřátelé disponovat sofistikovanými detektory ať již biologického nebo technického původu. Někdy je nejlepší nehybně čekat...
+Ale znát svého nepřítele se vyplatí.
+
+
+// Look
+(later, maybe) tooltip
+

@@ -1,0 +1,110 @@
+// Move
+moving (running, sneak)
+
+// Look
+tooltip
+aiming
+fps/rpg view
+
+// HUD
+toolbelt
+hp
+energy
+hunger 
+thirst
+states and conditions
+temperature
+time
+level and expirience bar
+minimap
+alarm and clock
+compass + indicators
+
+
+// basic interaction
+interaction with objects
+collecting + heavy
+woodcutting
+stone mining
+bush fruit collecting
+sleeping, relaxing (active relaxings)
+eating
+drinking
+
+// Processing material
+processing material 
+processing items
+repairing
+scraping, recycle
+
+// Detection
+hiding, detection
+
+// Crafting
+crafting (general)
+blueprints (general)
+
+// Inventory
+inventory (general)
+wearing cloths + character slots
+equip item (toolbelt)
+
+// Basic contruction
+construction (set foundation)
+campfires (heat, food, light)
+building construction
+building blocks
+building objects (campfire, storage)
+
+// Advanced crafting
+toolkits (carpenter, smith, doctor,...)
+crafting arts (sculptures, paintings, music instuments?)
+
+// Skills and characteristics
+survival characteristics (profession/class, +/-, mood)
+skill tree
+level, exping and skilling
+perks and skills
+
+// Vehicles and transportation
+vehicles and transporation
+flying (jets, jetpacks, parachute,...)
+
+// Logistic system
+logistics (drones, robots, suvivalist)
+storages (chest, log storage, fridge)
+
+// Map
+map (complete chapter)
+
+// Advanced construction
+upgrading and modifying
+traps
+colony (complete chapter, maybe with commands)
+defences (chapter)
+machines, assemblers
+
+
+// Combat
+combat - shooting (bow, sling, pistol, smg, rifle, assault rifle, machine gun, granade, rocket luncher), melee (fists, club, axe, sword, dagger)
+
+// Multiplayer
+alliance/fractions
+trading
+
+// Commands
+commands (complete chapter)
+command mode (complete chapter?)
+
+// Major skills
+each skill tutorial! (oh shit :D)
+
+// money
+vending machines
+money
+money substitutes, 
+currency, 
+nomad traders
+animals
+
+

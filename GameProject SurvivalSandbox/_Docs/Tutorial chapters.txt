@@ -1,0 +1,45 @@
+1) Move and look
+- move
+- look
+- hud
+
+2) Interaction
+- basic interaction
+- detection
+
+3) Inventory and crafting
+- inventory
+- crafting
+
+4) Construction
+- basic construction
+
+5) Skills and character
+- skills and charecteristics
+
+6) Processing
+- processing
+
+7) Combat
+- combat
+
+8) Map
+
+9) Advanced construction
+
+10) Logistics
+
+11) Advanced crafting
+
+10) Advanced construction
+
+11) Vehicles
+
+12) Money
+
+13) Commands
+
+14) Multiplayer
+
+X) Major skills
+- all skills...

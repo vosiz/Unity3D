@@ -1,0 +1,79 @@
+Carpenter
+- Wood-chopping
+- Wood-processing
+- Wood-crafting
+
+Geologist
+- Mining
+- Masonry
+
+Biologist
+- Cooking
+- Farming
+- Hunting
+- Fishing
+- Gathering
+
+Defender
+- Unarmored
+- Light armor
+- Medium armor
+- Heavy armor
+- Force armor
+
+Constructor
+- Tools
+- Wood
+- Stone
+- Metal
+- Plastic
+- Misc
+
+Attacker
+- Unarmed
+- Chopping
+- Slashing
+- Piercing
+- Shooting
+
+Shooter
+- Archery
+- Pistols
+- Shotguns
+- SMGs
+- LMGs
+- MGs
+- Rifles
+- Throwing weapons
+- Granade lunchers
+- Rocket lunchers
+- Mortars
+- Energy weapons
+- Plasma weapons
+
+Body skill
+- Athletics
+- Hard-skin
+
+Craftsman
+- Tailoring
+- Smithing
+- Pottery
+- Art
+- Misc
+
+Engineer
+- Repairing
+- Scraping
+- Weapon crafting
+- Armor crafting
+- Tool crafting
+- Defence crafting
+
+
+Scientist
+- Medicine
+- Herbalism
+- Chemistry
+- Physics
+- Research and Development

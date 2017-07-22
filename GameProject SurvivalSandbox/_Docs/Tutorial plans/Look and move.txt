@@ -1,0 +1,58 @@
+1) Look and move
+====================================================
+Introduction to tutorials
+- first dialog with ok button
+- "L" for objectives
+
+HeadsUpDisplay introduction
+- introduction what HUD is
+- areas of HUD
+
+Toolbelt (lower-middle)
+- toolbelt (basic, 6 available from 20, equpping)
+
+Conditions (lower-left corner)
+- hp bar + information (basic, 0, max + current state, regen, replenishing with items)
+- energy bar + information (basic, 0, max + current state, regen, replenishing with items)
+- (later) stamina bar + information (basic, 0, max + current state, regen, replenishing with items)
+- thirst + information (basic, 0, max + current state, regen, replenishing with items)
+- hunger + infromation (basic, 0, max + current state, regen, replenishing with items)
+- states + information (basic, blue/yellow/red/green icons + samples)
+
+Level (upper-left)
+- level (basic, getting up)
+- expirience bar (basic, exping, skills and perks first mansion)
+
+Compass (upper-middle)
+- compass (basic, indications - signal strength)
+
+Minimap (upper-right corner)
+- minimap (basic, indication, upgrades)
+- realtime
+- ingametime (IGT) (basic convertion, night, morning, day length)
+- alarms (countdown / alarm at - realtime or ingametime)
+- temperature (basic, player´s, outside, highest and lowest)
+
+Equipment (lower-right corner)
+- current equip (basic, mainly - tool, weapon, armor state, vehicle state - fuel, armor state, state)
+
+
+Look around
+- 4 different views (player circles and chose one)
+- look around until certain cm value of mouse move reached
+
+First moving
+- WSAD + mouse introduction
+- move W
+- move S
+- move A
+- move D
+- move to flag
+- run to another flag
+- crouch in given architecture
+- sneak around flag
+
+
+// Look
+(later, maybe) tooltip
+
